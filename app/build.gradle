@@ -3,6 +3,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+def apiKeysFile = rootProject.file("apikeys.properties")
+def apiKeysProperties = new Properties()
+apiKeysProperties.load(new FileInputStream(apiKeysFile))
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
@@ -15,14 +19,22 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+
+        debug {
+            buildConfigField "String", 'BASE_URL', "\"https://api.themoviedb.org/3/movie/\""
+            buildConfigField "String", 'MOVIE_API_KEY', apiKeysProperties["movie_api_key"]
+        }
+
         release {
+            buildConfigField "String", 'BASE_URL', "\"https://api.themoviedb.org/3/movie/\""
+            buildConfigField "String", 'MOVIE_API_KEY', apiKeysProperties["movie_api_key"]
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility = kotlin_version
-        targetCompatibility = kotlin_version
+        sourceCompatibility = "1.7"
+        targetCompatibility = "1.7"
     }
 }
 
