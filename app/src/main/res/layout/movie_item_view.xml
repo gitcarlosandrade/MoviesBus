@@ -10,13 +10,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        >
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/moviePoster"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -27,17 +30,19 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/gradient_border"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:textColor="#FFFFFF"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/genre"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -48,8 +53,10 @@
             android:id="@+id/genre"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:textColor="#FFFFFF"
+            android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@id/releaseYear"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -59,8 +66,10 @@
             android:id="@+id/releaseYear"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:textSize="12sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:textColor="#FFFFFF"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@id/voteAverage"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/voteAverage"
@@ -71,9 +80,11 @@
             android:id="@+id/voteAverage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:gravity="end"
-            android:textSize="12sp"
             android:textColor="#FFFFFF"
+            android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@id/details"
             app:layout_constraintLeft_toRightOf="@id/releaseYear"
             app:layout_constraintRight_toRightOf="parent"
@@ -84,15 +95,20 @@
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:drawableTint="@color/colorAccent"
             android:gravity="end|center_vertical"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"
-            android:text="Mais sobre esse filme"
+            android:text="@string/movie_item_cta"
             android:textAllCaps="false"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="16dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
