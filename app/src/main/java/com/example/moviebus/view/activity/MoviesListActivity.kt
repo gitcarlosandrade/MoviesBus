@@ -1,9 +1,10 @@
-package com.example.moviebus
+package com.example.moviebus.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.moviebus.R
 
-class MainActivity : AppCompatActivity() {
+class MoviesListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
