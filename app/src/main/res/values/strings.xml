@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MovieBus</string>
+    <string name="movie_item_cta">Mais sobre esse filme</string>
 </resources>
