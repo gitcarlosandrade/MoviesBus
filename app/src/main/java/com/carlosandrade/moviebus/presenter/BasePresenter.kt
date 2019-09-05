@@ -1,4 +1,4 @@
-package com.example.moviebus.presenter
+package com.carlosandrade.moviebus.presenter
 
 interface BasePresenter {
     fun subscribe()

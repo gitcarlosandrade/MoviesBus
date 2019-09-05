@@ -1,4 +1,4 @@
-package com.example.moviebus
+package com.carlosandrade.moviebus
 
 import org.junit.Test
 

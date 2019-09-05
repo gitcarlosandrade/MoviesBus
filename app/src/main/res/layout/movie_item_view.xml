@@ -11,8 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        >
+        android:layout_gravity="center_horizontal">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/moviePoster"
@@ -97,6 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
             android:drawableEnd="@drawable/ic_arrow_right"
             android:drawableTint="@color/colorAccent"
             android:gravity="end|center_vertical"
@@ -107,8 +107,7 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginBottom="16dp"/>
+            app:layout_constraintRight_toRightOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
