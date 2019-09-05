@@ -1,4 +1,4 @@
-package com.carlosandrade.moviebus.repository.entity
+package com.carlosandrade.moviebus.repository.local.entity
 import com.google.gson.annotations.SerializedName
 
 
