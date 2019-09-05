@@ -1,8 +1,8 @@
-package com.carlosandrade.moviebus.repository.local.entity
+package com.carlosandrade.moviebus.repository.remote.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Movie(
+data class MovieResponse(
     @SerializedName("backdrop_path") val backdropPath: String? = null,
     @SerializedName("genre_ids") val genreIds: List<Int?>? = null,
     @SerializedName("original_language") val originalLanguage: String? = null,

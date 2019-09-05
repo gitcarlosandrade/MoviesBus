@@ -1,14 +1,15 @@
 package com.carlosandrade.moviebus.presenter.movies
 
-import com.carlosandrade.moviebus.repository.entity.MostPopularMovies
+import com.carlosandrade.moviebus.repository.remote.response.MostPopularMoviesResponse
 import com.carlosandrade.moviebus.presenter.BasePresenter
 import com.carlosandrade.moviebus.presenter.model.Movie
 
 interface MoviesListContract {
 
     interface Presenter : BasePresenter {
-        fun handleSuccess(mostPopularMovies: MostPopularMovies)
+        fun handleSuccess(pair: Pair<MostPopularMoviesResponse, String>)
         fun handleError(throwable: Throwable)
+        fun getMovies()
     }
 
     interface View {
